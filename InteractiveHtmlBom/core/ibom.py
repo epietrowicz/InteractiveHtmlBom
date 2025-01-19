@@ -288,6 +288,8 @@ def generate_file(pcb_file_dir, pcb_file_name, pcbdata, config):
     pcbdata_js = get_pcbdata_javascript(pcbdata, config.compression)
     log.info("Dumping pcb data")
     config_js = "var config = " + config.get_html_config()
+    # config_js = "var config = {\"dark_mode\": true, \"show_pads\": true, \"show_fabrication\": false, \"show_silkscreen\": true, \"highlight_pin1\": \"selected\", \"redraw_on_drag\": true, \"board_rotation\": 0.0, \"checkboxes\": \"\", \"bom_view\": \"top-bottom\", \"layer_view\": \"F\", \"offset_back_rotation\": false, \"kicad_text_formatting\": true, \"fields\": [\"Value\", \"Footprint\"]}"
+
     html = get_file_content("ibom.html")
     html = html.replace('///CSS///', get_file_content('ibom.css'))
     html = html.replace('///USERCSS///', get_file_content('user.css'))

@@ -1284,12 +1284,16 @@ function hideNetlistButton() {
 function topToggle() {
   var top = document.getElementById("top");
   var toptoggle = document.getElementById("toptoggle");
-  if (top.style.display === "none") {
+  var topdivider = document.getElementById("topdivider");
+  console.log("style", top.style.display);
+  if (top.style.display !== "flex") {
     top.style.display = "flex";
     toptoggle.classList.remove("flipped");
+    topdivider.classList.remove("offset");
   } else {
     top.style.display = "none";
     toptoggle.classList.add("flipped");
+    topdivider.classList.add("offset");
   }
 }
 
@@ -1303,6 +1307,13 @@ window.onload = function (e) {
   dbgdiv = document.getElementById("dbg");
   bom = document.getElementById("bombody");
   bomhead = document.getElementById("bomhead");
+
+  var toptoggle = document.getElementById("toptoggle");
+  toptoggle.classList.add("flipped");
+
+  var topdivider = document.getElementById("topdivider");
+  topdivider.classList.add("offset");
+
   filter = "";
   reflookup = "";
   if (!("nets" in pcbdata)) {
@@ -1319,6 +1330,5 @@ window.onload = function (e) {
       document.getElementById('fullscreenCheckbox').checked = false;
   });
 }
-
 window.onresize = resizeAll;
 window.matchMedia("print").addListener(resizeAll);

@@ -2,40 +2,41 @@
   --pcb-edge-color: black;
   --pad-color: #878787;
   --pad-hole-color: #CCCCCC;
-  --pad-color-highlight: #D04040;
+  --pad-color-highlight: #4a7bbd;
   --pad-color-highlight-both: #D0D040;
-  --pad-color-highlight-marked: #44a344;
+  --pad-color-highlight-marked: #4a7bbd;
   --pin1-outline-color: #ffb629;
   --pin1-outline-color-highlight: #ffb629;
   --pin1-outline-color-highlight-both: #fcbb39;
   --pin1-outline-color-highlight-marked: #fdbe41;
-  --silkscreen-edge-color: #aa4;
-  --silkscreen-polygon-color: #4aa;
-  --silkscreen-text-color: #4aa;
+  --silkscreen-edge-color: #ffffffaa;
+  --silkscreen-polygon-color: #ffffffaa;
+  --silkscreen-text-color: #ffffffaa;
   --fabrication-edge-color: #907651;
   --fabrication-polygon-color: #907651;
   --fabrication-text-color: #a27c24;
   --track-color: #def5f1;
-  --track-color-highlight: #D04040;
+  --track-color-highlight: #4a7bbd;
   --zone-color: #def5f1;
-  --zone-color-highlight: #d0404080;
+  --zone-color-highlight: #4a7cbdbb;
 }
 
 html,
 body {
   margin: 0px;
   height: 100%;
-  font-family: Verdana, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* font-family: Verdana, sans-serif; */
 }
 
 .dark.topmostdiv {
   --pcb-edge-color: #eee;
-  --pad-color: #808080;
-  --pin1-outline-color: #ffa800;
-  --pin1-outline-color-highlight: #ccff00;
-  --track-color: #42524f;
-  --zone-color: #42524f;
-  background-color: #252c30;
+  --pad-color: #d9a232;
+  --pin1-outline-color: #e3b62e;
+  --pin1-outline-color-highlight: #e3b62e;
+  --track-color: #666666;
+  --zone-color: #666666;
+  background-color: #001023;
   color: #eee;
 }
 
@@ -58,13 +59,13 @@ button {
 }
 
 button.depressed {
-  background-color: #0a0;
+  background-color: #4a7bbd;
   color: white;
 }
 
 .dark button.depressed {
   /* This will be inverted */
-  background-color: #b3b;
+  background-color: #b58442;
 }
 
 button:focus {
@@ -96,7 +97,7 @@ button#bom-netlist-btn {
 }
 
 button#copy {
-  background-image: url("data:image/svg+xml,%3Csvg height='48' viewBox='0 0 48 48' width='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h48v48h-48z' fill='none'/%3E%3Cpath d='M32 2h-24c-2.21 0-4 1.79-4 4v28h4v-28h24v-4zm6 8h-22c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h22c2.21 0 4-1.79 4-4v-28c0-2.21-1.79-4-4-4zm0 32h-22v-28h22v28z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNvcHkiPjxyZWN0IHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgeD0iOCIgeT0iOCIgcng9IjIiIHJ5PSIyIi8+PHBhdGggZD0iTTQgMTZjLTEuMSAwLTItLjktMi0yVjRjMC0xLjEuOS0yIDItMmgxMGMxLjEgMCAyIC45IDIgMiIvPjwvc3ZnPg==");
   background-position: 6px 6px;
   background-repeat: no-repeat;
   background-size: 26px 26px;
@@ -189,7 +190,8 @@ canvas:active {
 
 .bom {
   border-collapse: collapse;
-  font-family: Consolas, "DejaVu Sans Mono", Monaco, monospace;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* font-family: Consolas, "DejaVu Sans Mono", Monaco, monospace; */
   font-size: 10pt;
   table-layout: fixed;
   width: 100%;
@@ -225,7 +227,7 @@ canvas:active {
 }
 
 .dark .bom tr.highlighted:nth-child(n) {
-  background-color: #226022;
+  background-color: #4a7bbd;
 }
 
 .bom tr:nth-child(even) {
@@ -366,8 +368,9 @@ canvas:active {
   float: left;
   height: 40px;
   margin: 10px 5px;
-  padding: 12px 32px;
-  font-family: Consolas, "DejaVu Sans Mono", Monaco, monospace;
+  padding: 12px 32px 12px 40px;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* font-family: Consolas, "DejaVu Sans Mono", Monaco, monospace; */
   font-size: 18px;
   box-sizing: border-box;
   border: 1px solid #888;
@@ -375,7 +378,7 @@ canvas:active {
   outline: none;
   background-color: #eee;
   transition: background-color 0.2s, border 0.2s;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABNklEQVQ4T8XSMUvDQBQH8P/LElFa/AIZHcTBQSz0I/gFstTBRR2KUC4ldDxw7h0Bl3RRUATxi4iiODgoiLNrbQYp5J6cpJJqomkX33Z37/14d/dIa33MzDuYI4johOI4XhyNRteO46zNYjDzAxE1yBZprVeZ+QbAUhXEGJMA2Ox2u4+fQIa0mPmsCgCgJYQ4t7lfgF0opQYAdv9ABkKI/UnOFCClXKjX61cA1osQY8x9kiRNKeV7IWA3oyhaSdP0FkAtjxhj3hzH2RBCPOf3pzqYHCilfAAX+URm9oMguPzeWSGQvUcMYC8rOBJCHBRdqxTo9/vbRHRqi8bj8XKv1xvODbiuW2u32/bvf0SlDv4XYOY7z/Mavu+nM1+BmQ+NMc0wDF/LprP0DbTWW0T00ul0nn4b7Q87+X4Qmfiq2wAAAABJRU5ErkJggg==');
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23CCCCCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-filter"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>');
   background-position: 10px 10px;
   background-repeat: no-repeat;
 }
@@ -456,7 +459,8 @@ mark.highlight {
 
 #vismenu-content {
   left: 0px;
-  font-family: Verdana, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* font-family: Verdana, sans-serif; */
 }
 
 .dark .statsbtn,
@@ -579,7 +583,8 @@ mark.highlight {
   height: 24px;
   margin: 10px 5px;
   padding: 5px 5px;
-  font-family: Consolas, "DejaVu Sans Mono", Monaco, monospace;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* font-family: Consolas, "DejaVu Sans Mono", Monaco, monospace; */
   font-size: 14px;
   box-sizing: border-box;
   border: 1px solid #888;
@@ -614,10 +619,11 @@ mark.highlight {
 }
 
 #top {
-  display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
+  /* display: flex; */
+  display: none;
 }
 
 #topdivider {
@@ -639,8 +645,8 @@ mark.highlight {
   cursor: pointer;
   user-select: none;
   position: absolute;
-  padding: 0.1rem 0.3rem;
-  top: -0.4rem;
+  padding: 0rem 0.5rem;
+  top: -0.8rem;
   left: -1rem;
   font-size: 1.4rem;
   line-height: 60%;
@@ -652,6 +658,10 @@ mark.highlight {
 
 .flipped {
   transform: rotate(0.5turn);
+}
+
+.offset{
+  margin-top: 1rem;
 }
 
 .dark #toptoggle {
@@ -728,20 +738,20 @@ mark.highlight {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #0a0;
+  background: #4a7bbd;
   cursor: pointer;
   margin-top: -4px;
 }
 
 .dark .slider::-webkit-slider-thumb {
-  background: #3d3;
+  background: #4a7bbd;
 }
 
 .slider::-moz-range-thumb {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #0a0;
+  background: #4a7bbd;
   cursor: pointer;
 }
 
@@ -752,7 +762,7 @@ mark.highlight {
 }
 
 .dark .slider::-moz-range-thumb {
-  background: #3d3;
+  background: #4a7bbd;
 }
 
 .slider::-ms-track {
@@ -781,7 +791,7 @@ mark.highlight {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #0a0;
+  background: #4a7bbd;
   cursor: pointer;
   margin: 0;
 }
