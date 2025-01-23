@@ -27,12 +27,7 @@ def main():
 
     import wx
 
-    if create_wx_app:
-        app = wx.App()
-        if hasattr(wx, "APP_ASSERT_SUPPRESS"):
-            app.SetAssertMode(wx.APP_ASSERT_SUPPRESS)
-    elif hasattr(wx, "DisableAsserts"):
-        wx.DisableAsserts()
+    wx.DisableAsserts()
 
     from .core import ibom
     from .core.config import Config
