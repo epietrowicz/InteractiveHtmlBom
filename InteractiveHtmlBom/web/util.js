@@ -53,10 +53,15 @@ function fancyDblClickHandler(el, onsingle, ondouble) {
 }
 
 function smoothScrollToRow(rowid) {
-  document.getElementById(rowid).scrollIntoView({
-    behavior: "smooth",
-    block: "center",
-    inline: "nearest"
+  const rowElement = document.getElementById(rowid);
+  if (!rowElement) return;
+
+  const bomElement = document.getElementById("bomdiv");
+  if (!bomElement) return;
+
+  bomElement.scrollTo({
+    top: rowElement.offsetTop,
+    behavior: "smooth"
   });
 }
 
